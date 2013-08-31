@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invoice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".Invoice" >
+
+    <RelativeLayout
+        android:id="@+id/v321"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pattern" >
+
+        <Button
+            android:id="@+id/skip_invoice"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/skip_button" />
+
+        <Button
+            android:id="@+id/submit_invoice"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/donebutton" />
+
+        <EditText
+            android:id="@+id/amount_spent"
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="350dp"
+            android:ems="10"
+            android:hint="Enter the Amount You Spent at our Store Today Here"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Silver_app"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/invoice_myview"
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="Enter Your Invoice ID Here"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Silver_app"
+            android:textSize="32sp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView2"
+            android:layout_below="@+id/imageView2"
+            android:text="We Have Our Eyes On You"
+            android:textColor="@color/White"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/amount_spent"
+            android:layout_alignTop="@+id/logo"
+            android:src="@drawable/eyes" />
+
+    <ProgressBar
+        android:id="@+id/load_invoice"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/amount_spent"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:indeterminateDrawable="@drawable/prog_pop" />
+
+    <ImageView
+        android:id="@+id/home_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/nocheatingzone" />
+
+    <TextView
+        android:id="@+id/load_invoice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/load_invoice"
+        android:layout_marginLeft="400dp"
+        android:gravity="center"
+        android:text="Verifying Invoice ID , PLease wait.." />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myview3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    tools:context=".Rewards" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern" >
+
+    <ImageView
+        android:id="@+id/c"
+        android:layout_width="450dp"
+        android:layout_height="375dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="29dp"
+        android:src="@drawable/box_left" />
+
+    <TextView
+        android:id="@+id/currentpoints"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="280dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Purple"
+        android:textSize="@dimen/success" />
+
+    <TextView
+        android:id="@+id/currentmessage"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+     android:layout_marginLeft="50dp"
+       android:layout_marginTop="480dp"
+   
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Blue"
+        android:textSize="@dimen/success" />
+
+    <ImageView
+        android:id="@+id/gf"
+        android:layout_width="500dp"
+        android:layout_height="525dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="22dp"
+        android:src="@drawable/box_list" />
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+       android:layout_marginLeft="25dp"
+       android:layout_marginTop="20dp"
+        android:src="@drawable/logo" />
+
+    <ScrollView
+        android:id="@+id/ListViewForPoints"
+        style="@style/AppBaseTheme"
+        android:layout_width="475dp"
+        android:layout_height="375dp"
+        android:layout_marginLeft="515dp"
+        android:layout_marginTop="210dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutForPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/totalpoints"
+        style="@style/AppBaseTheme"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="555dp"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:textColor="@color/Blue"
+        android:textSize="@dimen/success" />
+
+    <TextView
+        android:id="@+id/displaymessage"
+        android:layout_width="270dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="700dp"
+        android:layout_marginTop="115dp"
+        android:gravity="center"
+        android:textColor="@color/Purple"
+        android:textSize="@dimen/success" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="870dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/homebutton" />
+
+     <ProgressBar
+         android:id="@+id/load_rewards"
+         
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:layout_marginLeft="700dp"
+         android:layout_marginTop="340dp"
+         android:indeterminateDrawable="@drawable/prog_pop" />
+
+        <TextView
+            android:id="@+id/load_text_rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="720dp"
+           android:layout_marginTop="450dp"
+            
+            android:text="Loading..." />
+        <ProgressBar
+         android:id="@+id/load_rewards_cpoints"
+         
+         android:layout_width="70dp"
+         android:layout_height="70dp"
+         android:layout_marginLeft="210dp"
+         android:layout_marginTop="290dp"
+         android:indeterminateDrawable="@drawable/prog1" />
+
+        <TextView
+            android:id="@+id/load_text_rewards_cpoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="360dp"
+            android:text="Loading..."
+            android:gravity="center"
+            android:textColor="@color/Blue" />
+
+        <ProgressBar
+         android:id="@+id/load_rewards_tpoints"
+         
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+         android:layout_marginLeft="580dp"
+         android:layout_marginTop="95dp"
+         android:indeterminateDrawable="@drawable/prog_pop" />
+
+        <TextView
+            android:id="@+id/load_text_rewards_tpoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="575dp"
+           android:layout_marginTop="145dp"
+            
+            android:text="Loading..." />
+
+        <TextView
+            android:id="@+id/marquee"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="575dp"
+            android:layout_marginTop="25dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Click Here To Earn More Kilos"
+            android:textColor="@color/White"
+            android:textSize="@dimen/success" />
+
+</RelativeLayout>
+
+</RelativeLayout>

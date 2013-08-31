@@ -1,0 +1,1 @@
+{"Valid":"true","UserID":1,"FirstName":"Pradip","FullName":"Rajat Sharma","QrCode":"HiThere","CumulativePoints":200,"Email":"saxenadhruv@hotmail.com"}

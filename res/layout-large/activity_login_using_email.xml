@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myview5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    tools:context=".LoginUsingEmail" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pattern" >
+
+        <EditText
+            android:id="@+id/email_login1"
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="Enter Your Email Address Here"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/Blue"
+            android:textColorHint="@color/Silver_app"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/log_email"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="85dp"
+            android:background="@drawable/login_email" />
+
+        <Button
+            android:id="@+id/h"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/logo"
+            android:layout_marginRight="78dp"
+            android:background="@drawable/homebutton" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/logo" />
+
+        <ProgressBar
+            android:id="@+id/load"
+            android:indeterminateDrawable="@drawable/prog_pop"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+           android:layout_marginTop="380dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="23dp"
+            style="?android:attr/progressBarStyleInverse" />
+
+        <TextView
+            android:id="@+id/load_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/load"
+            android:layout_centerHorizontal="true"
+            android:text="Loading..." />
+
+    </RelativeLayout>
+
+</RelativeLayout>

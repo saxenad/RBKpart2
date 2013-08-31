@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myview_register"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/Blue"
+    android:fillViewport="true" >
+
+  <RelativeLayout
+      android:id="@+id/v123"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/pattern" >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/linearLayout2"
+          android:orientation="vertical" >
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+                <ProgressBar
+                  android:id="@+id/load_reg"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                
+                  android:layout_centerHorizontal="true"
+                  android:indeterminateDrawable="@drawable/prog_pop" />
+
+              <TextView
+                  android:id="@+id/emailnotvalid"
+                  android:layout_width="fill_parent"
+                  android:layout_height="100dp"
+                  android:background="@color/Red"
+                  android:gravity="center"
+                  android:text="Please Try Again , Invalid Email Address !"
+                  android:textAppearance="?android:attr/textAppearanceLarge"
+                  android:textColor="@color/Black" />
+
+            
+              <Button
+                  android:id="@+id/register"
+                  android:layout_width="200dp"
+                  android:layout_height="100dp"
+                  android:layout_marginLeft="420dp"
+                  android:background="@drawable/donebutton"
+                   />
+
+          </RelativeLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/linearLayout1"
+          android:layout_width="match_parent"
+          android:layout_height="250dp"
+          android:orientation="vertical"
+          android:paddingLeft="60dp"
+          android:paddingTop="38dip" >
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+
+              <ImageView
+                  android:id="@+id/logo"
+                  android:layout_width="300dp"
+                  android:layout_height="150dp"
+                  android:background="@drawable/logo" />
+
+              <ImageView
+                  android:id="@+id/register_home"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="500dp"
+                  android:layout_marginTop="20dp"
+                  android:src="@drawable/homescanner" />
+
+          </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/linearLayout2"
+          android:layout_width="1024dp"
+          android:layout_height="600dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/linearLayout1"
+          android:orientation="vertical" >
+
+          <EditText
+              android:id="@+id/firstname"
+              android:layout_width="800dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="100dp"
+              android:layout_marginTop="20dip"
+              android:ems="10"
+              android:hint="Enter Your First Name Here"
+              android:inputType="textPersonName"
+              android:textColor="@color/Blue"
+              android:textColorHint="@color/Silver_app"
+              android:textSize="32sp" />
+
+          <EditText
+              android:id="@+id/Lastname"
+              android:layout_width="800dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="100dp"
+              android:layout_marginTop="20dip"
+              android:ems="10"
+              android:hint="Enter Your Last Name Here"
+              android:inputType="textPersonName"
+              android:textColor="@color/Blue"
+              android:textColorHint="@color/Silver_app"
+              android:textSize="32sp" />
+
+          <EditText
+              android:id="@+id/email"
+              android:layout_width="800dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="100dp"
+              android:layout_marginTop="20dip"
+              android:ems="10"
+              android:hint="Enter Your Email Address Here"
+              android:inputType="textEmailAddress"
+              android:textColor="@color/Blue"
+              android:textColorHint="@color/Silver_app"
+              android:textSize="32sp" />
+
+          <EditText
+              android:id="@+id/phone"
+              android:layout_width="800dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="100dp"
+              android:layout_marginTop="20dip"
+              android:ems="10"
+              android:hint="Enter Your Phone Number Here"
+              android:inputType="phone"
+              android:textColor="@color/Blue"
+              android:textColorHint="@color/Silver_app"
+              android:textSize="32sp"
+              android:imeOptions="actionDone" />
+
+<LinearLayout
+    android:layout_width="800dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="100dp"
+    android:layout_marginTop="20dp" >
+
+          <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:textSize="32sp"
+              android:gravity="center"
+              android:text="Enter Your Date of Birth"
+              android:textAppearance="?android:attr/textAppearanceLarge" />
+
+          <DatePicker
+              android:id="@+id/datePicker1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="200dp"
+              android:gravity="center"
+               />
+          </LinearLayout>
+
+          <RadioGroup
+              android:id="@+id/radioGroup1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginLeft="250dp"
+              android:layout_marginTop="50dip" >
+
+              <RadioButton
+                  android:id="@+id/radio0"
+                  android:layout_width="119dp"
+                  android:layout_height="wrap_content"
+                  android:text="Male"
+                  android:onClick="onRadioButtonClicked" />
+
+              <RadioButton
+                  android:id="@+id/radio1"
+                  android:layout_width="119dp"
+                  android:layout_marginLeft="300dp"
+                  android:layout_height="wrap_content"
+                  android:text="Female"
+                  android:onClick="onRadioButtonClicked"  />
+          </RadioGroup>
+
+      </LinearLayout>
+   
+  </RelativeLayout>
+
+</ScrollView>

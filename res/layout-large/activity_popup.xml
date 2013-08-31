@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myview4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/remaining"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/redeem"
+        android:layout_centerHorizontal="true"
+        android:background="@color/Red"
+        android:gravity="center"
+        android:textColor="@color/Black" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gf"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp"
+        android:gravity="center"
+        android:paddingLeft="20dp" />
+
+    <ImageView
+        android:id="@+id/gf"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="21dp"
+        android:paddingRight="40dp" />
+
+    <Button
+        android:id="@+id/redeem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="34dp"
+        android:background="@color/Blue"
+        android:text="Redeem" />
+     
+    <ProgressBar
+            android:id="@+id/load_pop"
+            android:indeterminateDrawable="@drawable/prog_pop"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+         
+            />
+
+    <TextView
+        android:id="@+id/load_pop_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/load_pop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="Please Wait..." />
+
+</RelativeLayout>

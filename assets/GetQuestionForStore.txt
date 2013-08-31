@@ -1,0 +1,1 @@
+{"Question":{"QuestionText":"How do you rate our store service","StoreId":3,"QuestionId":1},"Answers":[{"Id":1001,"Text":"Poor"},{"Id":1002,"Text":"Average"},{"Id":1003,"Text":"Good"},{"Id":1004,"Text":"Awesome"},{"Id":1005,"Text":"Exceptional"}]}

@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myview2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    tools:context=".Success" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/succes_page" >
+
+        <Button
+            android:id="@+id/homer"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+           android:layout_marginLeft="700dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/donebutton" />
+
+        <TextView
+            android:id="@+id/pp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="899dp"
+            android:layout_marginTop="280dp"
+            android:gravity="center"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/points_remaining" />
+
+        <TextView
+            android:id="@+id/success_message"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="530dp"
+            android:layout_marginTop="280dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/White"
+            android:textSize="@dimen/success"
+            android:textStyle="italic"
+            android:typeface="serif" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

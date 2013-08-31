@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="standard_padding">8dip</dimen> 
+    <dimen name="half_padding">4dip</dimen>
+    <dimen name="Divider">5dp</dimen>
+    <dimen name="big_totalpoints">45sp</dimen>
+    <dimen name="points_cum">45sp</dimen>
+    <dimen name="marquee_text">20sp</dimen>
+    <dimen name="success">35sp</dimen>
+    <dimen name="Download_textsize">75sp</dimen>
+    <dimen name="points_remaining">25sp</dimen> 
+    
+
+</resources>
