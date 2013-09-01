@@ -31,7 +31,7 @@ public class SyncingRedeemAwards extends IntentService {
 		int rewardsId = intent.getIntExtra("RewardsId",-999);
 		int userId=intent.getIntExtra("userId", -999);
 		int cumulativePoints=intent.getIntExtra("cumulativePoints",0);
-		String invoiceId=intent.getStringExtra("InvoiceId");
+		String invoiceId=intent.getStringExtra("Invoice");
 		String amount=intent.getStringExtra("Amount");
 		Boolean RedeemReward=intent.getBooleanExtra("RedeemReward",false);
 		int pointsEarnedToday=intent.getIntExtra("pointsToday",0);
@@ -50,13 +50,13 @@ public class SyncingRedeemAwards extends IntentService {
 		String Url=null;
 		if (amount==null)
 		{
-			if (RedeemReward) Url="http://192.168.1.117/BellyReworked1/api/NewPointsApi/MarkRewardAsRedeemed/?rewardsId="+rewardsId + "&userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"&answerId="+answerId;
-			else Url="http://192.168.1.117/BellyReworked1/api/NewPointsApi/InsertVisitPoints/?userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"&answerId="+answerId;
+			if (RedeemReward) Url="http://pointsbykilo.azurewebsites.net/api/NewPointsApi/MarkRewardAsRedeemed/?rewardsId="+rewardsId + "&userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"&answerId="+answerId;
+			else Url="http://pointsbykilo.azurewebsites.net/api/NewPointsApi/InsertVisitPoints/?userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"&answerId="+answerId;
 		}
 		else
 		{
-			if (RedeemReward) Url="http://192.168.1.117/BellyReworked1/api/NewPointsApi/MarkRewardAsRedeemed/?rewardsId="+rewardsId + "&userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"invoiceId="+invoiceId+"&amount="+amount+"&answerId="+answerId;
-			else Url="http://192.168.1.117/BellyReworked1/api/NewPointsApi/InsertInvoicePoints/?userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"invoiceId="+invoiceId+"&amount="+amount+"&answerId="+answerId;
+			if (RedeemReward) Url="http://pointsbykilo.azurewebsites.net/api/NewPointsApi/MarkRewardAsRedeemed/?rewardsId="+rewardsId + "&userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"invoiceId="+invoiceId+"&amount="+amount+"&answerId="+answerId;
+			else Url="http://pointsbykilo.azurewebsites.net/api/NewPointsApi/InsertInvoicePoints/?userId="+userId+"&storeId=" + storeId+"&pointsEarnedToday="+pointsEarnedToday+"&invoiceId="+invoiceId+"&amount="+amount+"&answerId="+answerId;
 		}
 
 		HttpClient httpClient = new DefaultHttpClient();

@@ -133,27 +133,7 @@ public class RewardsTableDatabaseHandler  extends SQLiteOpenHelper {
 	        }
 	    } 
 	   
-		   public List<RewardsInformation> getAllRewards(boolean requiresInternet,AssetManager am) throws JSONException{
-			   
-				  List<RewardsInformation> rewardsList = new ArrayList<RewardsInformation>();
-			   if (requiresInternet)
-			   {
-				   String url="http://pointsbykilo.azurewebsites.net/api/RewardsApi/GetStoreRewardsInformation/?storeId=1";
-				   String result=GloballyUsedFunctions.loadJSONFromFile(am, url);
-				   JSONArray ja = new JSONArray(result);
-					for (int i = 0; i < ja.length(); i++) {
-						JSONObject e = ja.getJSONObject(i);
-						RewardsInformation aa = new RewardsInformation();
 
-						aa.url = e.getString("ImageUrl");
-						aa.name = e.getString("RewardsText");
-						aa.points = e.getInt("RewardsPoints");
-						aa.id = e.getInt("RewardsId");
-						rewardsList.add(aa);
-			   }
-			   }
-			   	return rewardsList;
-		   }
 		   
 	   
 		public  List<RewardsInformation>getAllRewards() {

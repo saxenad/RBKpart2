@@ -43,7 +43,7 @@ public class EmailLoginExecution {
 					SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 					String StoreID= prefs.getString("storeId", "-999");
 					new VerifyUserUsingEmail(context,ctw)
-					.execute("http://192.168.1.117/BellyReworked1/api/UserApi/VerifyUserUsingEmail/?email="+email+"&StoreId="+StoreID);
+					.execute("http://pointsbykilo.azurewebsites.net/api/UserApi/VerifyUserUsingEmail/?email="+email+"&StoreId="+StoreID);
 				}
 			}
 		};

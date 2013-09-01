@@ -97,7 +97,6 @@ public class Downloader extends Activity {
 					aa.points = e.getInt("RewardsPoints");
 					aa.id = e.getInt("RewardsId");
 					map.add(aa);
-					map.add(aa);
 				}
 
 			} catch (Exception e) {
@@ -216,19 +215,19 @@ public class Downloader extends Activity {
 
 	public void js() {
 		new JSONFeedTask()
-				.execute("http://192.168.1.117/BellyReworked1/api/PointsApi/GetStoreRewardsInformation/?storeId="
+				.execute("http://pointsbykilo.azurewebsites.net/api/PointsApi/GetStoreRewardsInformation/?storeId="
 						+ StoreID);
 	}
 
 	public void ajs() {
 		new AJSONFeedTask()
-				.execute("http://192.168.1.117/BellyReworked1/api/PointsApi/GetFeaturedImagesForRewards/?storeId="
+				.execute("http://pointsbykilo.azurewebsites.net/api/PointsApi/GetFeaturedImagesForRewards/?storeId="
 						+ StoreID);
 	}
 
 	public void purchasePointsPerStore() {
 		new purchasePointsFeedTask()
-				.execute("http://192.168.1.117/BellyReworked1/api/InvoiceApi/GetPurchasePointsPerStore/?storeId=1");
+				.execute("http://pointsbykilo.azurewebsites.net/api/InvoiceApi/GetPurchasePointsPerStore/?storeId=1");
 	}
 
 	@Override

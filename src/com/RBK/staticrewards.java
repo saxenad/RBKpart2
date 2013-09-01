@@ -296,15 +296,7 @@ public class staticrewards extends Activity {
 
 		marquee = (TextView) findViewById(R.id.marquee);
 		marquee.setSelected(true);
-		marquee.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-
-				Intent intent = new Intent(v.getContext(), Feedback.class);
-				startActivityForResult(intent, 0);
-
-			}
-
-		});
+	
 
 		FillRewardsTable(View);
 		Displaymessage();

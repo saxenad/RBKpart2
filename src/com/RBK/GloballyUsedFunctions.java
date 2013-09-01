@@ -185,7 +185,7 @@ public static String MakeandReceiveHTTPResponse(String Url){
 		String myString = jsonArray.toString();
 
 		HttpPost httpPost = new HttpPost(
-				"http://192.168.1.117/BellyReworked1/api/UserApi/InsertUserSqlLite");
+				"http://pointsbykilo.azurewebsites.net/api/UserApi/InsertUserSqlLite");
 		StringEntity httpPostEntity = new StringEntity(myString, HTTP.UTF_8);
 		httpPostEntity.setContentType("application/json");
 		httpPost.setEntity(httpPostEntity);

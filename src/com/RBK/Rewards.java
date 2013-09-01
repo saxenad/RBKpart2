@@ -74,7 +74,7 @@ public class Rewards extends Activity {
 	AssetManager am;
 
 	Boolean test = false;
-
+	Boolean runResumeActivity=false;
 	// to be Passed on
 	int UserID;
 	int CumulativePoints;
@@ -94,15 +94,9 @@ public class Rewards extends Activity {
 		String  RequiresInternet=prefs.getString("RequiresInternet","true");
 		AssetManager am =getAssets();
 		RewardsTableDatabaseHandler rewardsdbHandler=new RewardsTableDatabaseHandler(getApplicationContext());
-		if (RequiresInternet.equals("true"))
-		return rewardsdbHandler.getAllRewards();
-		else
-			try {
-				return rewardsdbHandler.getAllRewards(true, am);
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				return null;
-			}
+		rewardsdbHandler.copyDataBase(getApplicationContext());
+		return	rewardsdbHandler.getAllRewards();
+			
 	}
 
 	private class JSONFeedTask extends AsyncTask<Void, Void, List<RewardsInformation>> {
@@ -304,7 +298,7 @@ public class Rewards extends Activity {
 
 				Intent intent = new Intent(v.getContext(), Feedback.class);
 				startActivityForResult(intent, 0);
-
+				runResumeActivity=true;
 			}
 
 		});
@@ -334,7 +328,7 @@ public class Rewards extends Activity {
 		u.setTextColor(Color.parseColor(alt_col));
 		u.setText("Scroll and Click on Rewards...");
 		// END OF HIDING AND SHOWING CURRENT POINTS AND CUMULATIVE POINTS
-
+		runResumeActivity=false;
 	}
 
 	public static Rewards getInstance() {
@@ -353,7 +347,7 @@ public class Rewards extends Activity {
 		System.gc();
 		test = Feedback.i;
 		Log.v("log_tag ", "on resume:::" + test);
-		if (test == true) {
+		if (test == true&&runResumeActivity==true) {
 			updatepoints();
 
 		}
@@ -372,7 +366,7 @@ public class Rewards extends Activity {
 		p.setTextColor(Color.parseColor("#336600"));
 		p.setText("Kilos Earned Today : " + kilosToday);
 		t.setText(String.valueOf(CumulativePoints));
-
+		marquee.setVisibility(View.GONE);
 	}
 
 	@Override
@@ -420,7 +414,8 @@ public class Rewards extends Activity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-
+		kilosToday=0;
+		CumulativePoints=0;
 		map = null;
 		System.gc();
 	}

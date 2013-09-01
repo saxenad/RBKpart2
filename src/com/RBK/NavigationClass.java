@@ -83,7 +83,6 @@ public class NavigationClass {
 		start.putExtra("Invoice", Invoice);
 		start.putExtra("Amount", Amount);
 		comingFrom.startActivity(start);
-		
 	}
 	
 	void MoveToScannerPage(Context c) {
