@@ -344,6 +344,8 @@ public class Rewards extends Activity {
 
 	@Override
 	protected void onResume() {
+        overridePendingTransition( R.anim.animation_enter, R.anim.animation_leave);
+
 		System.gc();
 		test = Feedback.i;
 		Log.v("log_tag ", "on resume:::" + test);

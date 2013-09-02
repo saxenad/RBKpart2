@@ -1,5 +1,6 @@
 package com.RBK;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -17,6 +18,9 @@ public class NavigationClass {
 //		Intent intent = new Intent(comingFrom, SyncingService.class);
 	//	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		
+		((Activity) comingFrom).overridePendingTransition(R.anim.animation_enter,
+                R.anim.animation_leave);
+		
 		Intent start = new Intent(comingFrom, GoingTo);
 		start.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		start.putExtra("userId", userId);
@@ -27,6 +31,7 @@ public class NavigationClass {
 		start.putExtra("email",email);
 		comingFrom.startActivity(start);
 
+			
 	}
 
 	void MovetoRegistrationPage(Context comingFrom, String qrCode) {
