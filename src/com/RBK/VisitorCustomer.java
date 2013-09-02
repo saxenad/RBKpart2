@@ -94,7 +94,6 @@ public class VisitorCustomer extends Activity {
 			UserTableDatabaseHandler userTableDatabaseHandler = new UserTableDatabaseHandler(
 					getApplicationContext());
 			
-			userTableDatabaseHandler.copyDataBase(getApplicationContext());
 			userTableDatabaseHandler.updateContact(Float.valueOf(0), "",
 					pointsEarnedToday, UserId);
 			// END of Updating SQLITE DATABASE
