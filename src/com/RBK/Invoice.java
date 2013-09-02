@@ -176,13 +176,11 @@ public class Invoice extends Activity {
 
 		} else {
 
-	        overridePendingTransition( R.anim.animation_enter, R.anim.animation_leave);
 
 			Intent start = new Intent(Invoice.this, staticrewards.class);
 			start.putExtra("userId", userId);
 			start.putExtra("writeToSQL", writeToSQL);
 			start.putExtra("kilosToday", pointsEarnedToday);
-	        overridePendingTransition( R.anim.animation_enter, R.anim.animation_leave);
 
 			startActivity(start);
 		}

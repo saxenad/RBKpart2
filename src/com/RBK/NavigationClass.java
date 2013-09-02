@@ -17,9 +17,7 @@ public class NavigationClass {
 			Context comingFrom, Class GoingTo, String name, String qrCode,String email,int cumulativePoints) {
 //		Intent intent = new Intent(comingFrom, SyncingService.class);
 	//	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		
-		((Activity) comingFrom).overridePendingTransition(R.anim.animation_enter,
-                R.anim.animation_leave);
+	
 		
 		Intent start = new Intent(comingFrom, GoingTo);
 		start.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

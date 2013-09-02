@@ -419,6 +419,7 @@ System.gc();
  @Override
 	  protected void onResume()
 	  {
+     overridePendingTransition( R.anim.animation_enter, R.anim.animation_leave);
 	    System.gc();
 	    super.onResume();
 	  }
